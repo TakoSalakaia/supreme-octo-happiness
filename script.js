@@ -43,7 +43,23 @@ function findById(items, id) {
     return items.find(item => item.id === id);
 }
 
-// ტესტები კონსოლზე
+
+// მონაცემები და ტესტები
+
+const products = [
+    { price: 1949, productName: "Samsung" },
+    { price: 899, productName: "Xiaomi" },
+    { price: 639, productName: "Apple AirPods" }
+];
+
+const objArray = [
+    { id: "1", name: "Item 1" },
+    { id: "2", name: "Item 2" },
+    { id: "3", name: "Item 3" }
+];
+
+// ტესტები
+
 console.log(isStringEmpty("")); // true
 console.log(isStringEmpty("hello")); // false
 
@@ -57,15 +73,7 @@ console.log(convertToLowerCase("MY NAME IS JANE")); // my name is jane
 
 console.log(filterNumbersOver100([50, 150, 200, 80, 300])); // [150, 200, 300]
 
-// მაგალითი data.items-ზე
-console.log(findCheapestProduct(data.items)); // ბეჭდავს ყველაზე იაფ პროდუქტს
-
-// მაგალითი findById-ზე
-const objArray = [
-    { id: "1", name: "Item 1" },
-    { id: "2", name: "Item 2" },
-    { id: "3", name: "Item 3" }
-];
+console.log(findCheapestProduct(products)); // ყველაზე იაფი პროდუქტი
 
 console.log(findById(objArray, "2")); // { id: "2", name: "Item 2" }
 console.log(findById(objArray, "5")); // undefined
